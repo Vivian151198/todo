@@ -12,6 +12,7 @@ export class AppController {
 
   @Post('/sum')
   sum(@Body() body: { num1: number; num2: number }) {
+    const a = 5;
     return this.appService.sum(body);
   }
 
