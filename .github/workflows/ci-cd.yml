@@ -1,6 +1,7 @@
 name: ci cd for todo app
 run-name: ${{ github.actor }} is learning GitHub Actions
 on:
+  push:
   pull_request:
     types: [opened]
     branches:
@@ -15,6 +16,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+      - name: install libraries and packages
+        run: npm install
       - name: run code linter
         run: npm run lint
       - name: run unit test
