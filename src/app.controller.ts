@@ -15,4 +15,10 @@ export class AppController {
     let a;
     return this.appService.sum(body);
   }
+
+  @Post("/divide")
+  divide(@Body()body: {num1: number; num2: number}) {
+    let a;
+    return this.appService.divide(body);
+  }
 }
