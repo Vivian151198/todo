@@ -23,6 +23,9 @@ describe('AppController (e2e)', () => {
   });
 
   it('/ (POST)', () => {
-    return request(app.getHttpServer()).post('/sum').send({num1: 2, num2: 4}).expect(201)
-  })
+    return request(app.getHttpServer())
+      .post('/sum')
+      .send({ num1: 2, num2: 4 })
+      .expect(201);
+  });
 });
